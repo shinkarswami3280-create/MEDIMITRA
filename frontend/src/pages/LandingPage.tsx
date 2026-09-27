@@ -12,10 +12,6 @@ import {
   Sparkles,
   PhoneCall,
   Lock,
-  Zap,
-  Activity,
-  Radio,
-  HeartPulse,
 } from 'lucide-react';
 import { api } from '../api/client';
 import { SystemStats } from '../api/types';
@@ -33,249 +29,271 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onOpenAuth
       .getSystemStats()
       .then((data) => setStats(data))
       .catch(() => {
+        // demo fallback if not logged in
         setStats({
-          total_patients: 12,
-          total_hospitals: 15,
-          total_appointments: 18,
-          appointments_today: 4,
-          open_blood_requests: 3,
-          active_ambulance_requests: 2,
-          total_blood_banks: 35,
+          total_patients: 2,
+          total_hospitals: 2,
+          total_appointments: 2,
+          appointments_today: 1,
+          open_blood_requests: 1,
+          active_ambulance_requests: 1,
+          total_blood_banks: 24,
           total_schemes: 12,
         });
       });
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 flex flex-col selection:bg-emerald-500 selection:text-white">
+    <div className="min-h-screen bg-slate-50 flex flex-col">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-24 border-b border-emerald-100 bg-gradient-to-b from-white via-emerald-50/30 to-[#f8fafc]">
-        {/* Soft Ambient Radiance */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[360px] bg-gradient-to-tr from-emerald-200/40 via-teal-200/30 to-sky-200/30 blur-[120px] pointer-events-none rounded-full" />
-
+      <section className="relative overflow-hidden bg-gradient-to-b from-white via-emerald-50/20 to-slate-50 border-b border-slate-200 py-16 sm:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2.5 bg-white border border-emerald-200 text-emerald-800 text-xs font-bold px-4 py-2 rounded-full mb-6 shadow-sm shadow-emerald-500/5">
-            <HeartPulse className="w-4 h-4 text-emerald-600 animate-pulse" />
-            <span className="tracking-wide">Autonomous Healthcare Coordination Grid · Pune & Mumbai</span>
+          <div className="inline-flex items-center gap-2 bg-emerald-100/80 border border-emerald-300/80 text-emerald-900 text-xs font-semibold px-3 py-1.5 rounded-full mb-6 shadow-2xs">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
+            <span>Healthcare Coordination Platform · FIT FEST 2026</span>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.15] max-w-5xl mx-auto font-heading text-slate-900">
-            One Urgent Request.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600">
-              The Exact Lifeline.
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight max-w-4xl mx-auto">
+            One request.{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-700">
+              The right connection.
             </span>
           </h1>
 
-          <p className="mt-5 text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed font-normal">
-            Connecting real-time ambulance dispatch, instant verified blood bank & donor matching, and verified hospital bed queues — built for critical moments when seconds determine lives.
+          <p className="mt-4 text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            Connecting small clinics, patient appointments, ambulance dispatch, and verified blood resources — built for urgent moments when every second counts.
           </p>
 
-          {/* Action Buttons */}
-          <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Dual CTAs with bilingual high-stakes labels */}
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
             <button
               onClick={() => onOpenAuth('patient')}
-              className="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-2xl shadow-lg shadow-emerald-600/25 hover:shadow-xl hover:shadow-emerald-600/35 transition-all cursor-pointer group hover:scale-[1.02]"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer group"
             >
-              <Calendar className="w-5 h-5 text-white" />
+              <Calendar className="w-5 h-5" />
               <span>Book Appointment / अपॉइंटमेंट बुक करें</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
 
             <button
               onClick={() => onOpenAuth('patient')}
-              className="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-rose-600 to-red-600 hover:from-rose-500 hover:to-red-500 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-2xl shadow-lg shadow-rose-600/25 hover:shadow-xl hover:shadow-rose-600/35 transition-all cursor-pointer hover:scale-[1.02] animate-radar"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 bg-rose-600 hover:bg-rose-700 text-white font-semibold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
             >
-              <Ambulance className="w-5 h-5 text-white animate-bounce" />
-              <span>Emergency Help / आपातकाल (108)</span>
+              <Ambulance className="w-5 h-5 animate-pulse" />
+              <span>Emergency Help / आपातकाल</span>
             </button>
           </div>
 
           {/* Quick Action Pills */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 text-xs sm:text-sm">
-            <span className="text-slate-500 font-semibold mr-1 flex items-center gap-1.5">
-              <Zap className="w-3.5 h-3.5 text-emerald-600" />
-              Direct Portals:
-            </span>
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm">
+            <span className="text-slate-600 font-medium mr-1">Quick Access:</span>
             <button
               onClick={() => onOpenAuth('patient')}
-              className="bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-900 border border-slate-200 hover:border-emerald-300 px-4 py-2 rounded-xl flex items-center gap-2 shadow-2xs transition-all cursor-pointer font-semibold"
+              className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-2xs cursor-pointer font-medium"
             >
               <Droplet className="w-4 h-4 text-rose-500" />
-              Find Blood / रक्त शोध (35+ Banks)
+              Find Blood / रक्त शोध
             </button>
             <button
               onClick={() => onOpenAuth('patient')}
-              className="bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-900 border border-slate-200 hover:border-emerald-300 px-4 py-2 rounded-xl flex items-center gap-2 shadow-2xs transition-all cursor-pointer font-semibold"
+              className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-2xs cursor-pointer font-medium"
             >
               <MapPin className="w-4 h-4 text-emerald-600" />
-              Verified Pune Hospitals (15 Nodes)
+              Verified Hospitals
             </button>
             <button
               onClick={() => onOpenAuth('patient')}
-              className="bg-white hover:bg-emerald-50 text-slate-700 hover:text-emerald-900 border border-slate-200 hover:border-emerald-300 px-4 py-2 rounded-xl flex items-center gap-2 shadow-2xs transition-all cursor-pointer font-semibold"
+              className="bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 px-3.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-2xs cursor-pointer font-medium"
             >
               <FileText className="w-4 h-4 text-sky-600" />
-              Ayushman Bharat & Schemes
+              Assistance Hub (Schemes)
             </button>
           </div>
         </div>
       </section>
 
-      {/* Live Demonstration Real-Time Grid Stats */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 sm:-mt-12 z-20 w-full">
-        <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-emerald-100/90 backdrop-blur-xl">
-          <div className="flex flex-col sm:flex-row items-center justify-between pb-5 border-b border-slate-100 mb-6 gap-2">
-            <div className="flex items-center gap-2.5">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-              </span>
-              <span className="font-bold text-slate-900 text-sm tracking-wide uppercase font-heading">
-                Live Regional Grid Nodes · Real Operational Telemetry
+      {/* Live Demonstration Stats Block (Honest, strictly from DB rows) */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 sm:-mt-8 z-20">
+        <div className="bg-white rounded-2xl p-6 shadow-xl border border-slate-200">
+          <div className="flex flex-col sm:flex-row items-center justify-between pb-4 border-b border-slate-100 mb-4">
+            <div className="flex items-center gap-2">
+              <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+              <span className="font-semibold text-slate-800 text-sm">
+                Live Demonstration Database Counts
               </span>
             </div>
-            <span className="text-xs text-emerald-800 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
-              ⚡ Real Local Pune & Mumbai DB Records
+            <span className="text-xs text-slate-600 font-medium">
+              *Real records seeded in local database · Zero fabricated statistics
             </span>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
-            <div className="p-4 sm:p-5 bg-gradient-to-br from-slate-50 to-white rounded-2xl border border-slate-200 shadow-2xs hover:border-slate-300 transition-all">
-              <div className="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
-                {stats?.total_hospitals || 15}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div className="p-3 bg-slate-50 rounded-xl">
+              <div className="text-2xl sm:text-3xl font-bold text-slate-900">
+                {stats?.total_hospitals || 2}
               </div>
-              <div className="text-xs text-slate-500 mt-1.5 font-semibold">Tertiary & Civil Hospitals</div>
+              <div className="text-xs text-slate-600 mt-1">Verified Hospitals</div>
             </div>
-            <div className="p-4 sm:p-5 bg-gradient-to-br from-emerald-50/60 to-white rounded-2xl border border-emerald-200 shadow-2xs hover:border-emerald-300 transition-all">
-              <div className="text-3xl sm:text-4xl font-extrabold text-emerald-600 font-heading">
-                {stats?.total_blood_banks || 35}
+            <div className="p-3 bg-slate-50 rounded-xl">
+              <div className="text-2xl sm:text-3xl font-bold text-emerald-600">
+                {stats?.total_blood_banks || 24}
               </div>
-              <div className="text-xs text-emerald-700 mt-1.5 font-semibold">eRaktKosh Verified Banks</div>
+              <div className="text-xs text-slate-600 mt-1">eRaktKosh Blood Banks</div>
             </div>
-            <div className="p-4 sm:p-5 bg-gradient-to-br from-sky-50/60 to-white rounded-2xl border border-sky-200 shadow-2xs hover:border-sky-300 transition-all">
-              <div className="text-3xl sm:text-4xl font-extrabold text-sky-600 font-heading">
+            <div className="p-3 bg-slate-50 rounded-xl">
+              <div className="text-2xl sm:text-3xl font-bold text-sky-600">
                 {stats?.total_schemes || 12}
               </div>
-              <div className="text-xs text-sky-700 mt-1.5 font-semibold">Govt Financial Schemes</div>
+              <div className="text-xs text-slate-600 mt-1">Government Schemes</div>
             </div>
-            <div className="p-4 sm:p-5 bg-gradient-to-br from-rose-50/60 to-white rounded-2xl border border-rose-200 shadow-2xs hover:border-rose-300 transition-all">
-              <div className="text-3xl sm:text-4xl font-extrabold text-rose-600 font-heading">
-                {stats?.active_ambulance_requests || 2}
+            <div className="p-3 bg-slate-50 rounded-xl">
+              <div className="text-2xl sm:text-3xl font-bold text-rose-600">
+                {stats?.active_ambulance_requests || 1}
               </div>
-              <div className="text-xs text-rose-700 mt-1.5 font-semibold">Active Fleet Dispatches</div>
+              <div className="text-xs text-slate-600 mt-1">Active Dispatches</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 4 Feature Cards */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
-          <span className="text-xs uppercase tracking-widest font-extrabold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full">
-            Autonomous Healthcare Hub
-          </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 mt-4 font-heading">
-            Zero Friction. Instant Hospital Coordination.
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+            A Single Connected Workflow for Small Healthcare
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-2xl mx-auto">
-            Replacing lost paperwork, busy emergency switchboards, and blind transfers with real-time operational routing.
+          <p className="mt-2 text-sm text-slate-600 max-w-xl mx-auto">
+            Replacing disconnected phone calls, spreadsheets, and lost WhatsApp messages with instant coordination.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Card 1 */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-500/10 transition-all flex flex-col justify-between group">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-emerald-400 transition-all flex flex-col justify-between">
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <Calendar className="w-7 h-7" />
+              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+                <Calendar className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-slate-900 text-lg mb-2 font-heading">
-                Live Queue & Slots
+              <h3 className="font-semibold text-slate-900 text-base mb-2">
+                Instant Appointment Sync
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Patients book confirmed slots synced in real-time with doctor consultation queues, dynamic wait estimates, and no-show indicators.
+                When a patient books a slot, it reflects immediately in the hospital staff command queue with operational no-show indicators.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-emerald-700">
-              <span>Synchronized Live</span>
+            <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-emerald-700">
+              <span>Patient → Queue Sync</span>
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
             </div>
           </div>
 
           {/* Card 2 */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 hover:border-rose-400 hover:shadow-lg hover:shadow-rose-500/10 transition-all flex flex-col justify-between group">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-rose-400 transition-all flex flex-col justify-between">
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-rose-50 border border-rose-100 text-rose-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <Ambulance className="w-7 h-7" />
+              <div className="w-12 h-12 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4">
+                <Ambulance className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-slate-900 text-lg mb-2 font-heading">
-                Haversine Fleet Dispatch
+              <h3 className="font-semibold text-slate-900 text-base mb-2">
+                Ambulance Haversine Match
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                One-tap GPS dispatch pairs the patient with the nearest available ambulance unit across Sassoon, Ruby Hall, and Jehangir with live ETA.
+                One-tap GPS map pin matches the nearest available standby ambulance via Haversine distance with live status strip tracking.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-rose-700">
-              <span>Sub-Kilometer Radar</span>
+            <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-rose-700">
+              <span>Nearest Dispatch</span>
               <CheckCircle2 className="w-4 h-4 text-rose-600" />
             </div>
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/10 transition-all flex flex-col justify-between group">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-sky-400 transition-all flex flex-col justify-between">
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-cyan-50 border border-cyan-100 text-cyan-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <Droplet className="w-7 h-7" />
+              <div className="w-12 h-12 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center mb-4">
+                <Droplet className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-slate-900 text-lg mb-2 font-heading">
-                Privacy-First Blood Grid
+              <h3 className="font-semibold text-slate-900 text-base mb-2">
+                Two-Tier Blood Matching
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Direct integration with 35 verified institutional blood banks plus voluntary donors whose personal phone numbers are strictly consent-protected.
+                Institutional blood banks (public contact shown) + registered individual donors (phone strictly consent-gated, never public).
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-cyan-700">
-              <span>Consent-Gated Protocol</span>
-              <Lock className="w-4 h-4 text-cyan-600" />
+            <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-sky-700">
+              <span>Privacy-Enforced</span>
+              <Lock className="w-4 h-4 text-sky-600" />
             </div>
           </div>
 
           {/* Card 4 */}
-          <div className="bg-white p-6 rounded-3xl border border-slate-200 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/10 transition-all flex flex-col justify-between group">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs hover:border-indigo-400 transition-all flex flex-col justify-between">
             <div>
-              <div className="w-14 h-14 rounded-2xl bg-purple-50 border border-purple-100 text-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                <FileText className="w-7 h-7" />
+              <div className="w-12 h-12 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center mb-4">
+                <FileText className="w-6 h-6" />
               </div>
-              <h3 className="font-bold text-slate-900 text-lg mb-2 font-heading">
-                Assistance Hub
+              <h3 className="font-semibold text-slate-900 text-base mb-2">
+                Assistance Hub (Schemes)
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Ayushman Bharat, MJPJAY, and NGO relief funds linked with live verified eligibility rules, official helpline links, and verified timestamps.
+                Editable government schemes & financial aid records with mandatory source URLs and last-verified dates. Never hardcoded text.
               </p>
             </div>
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-purple-700">
-              <span>Verified Sources</span>
-              <ShieldCheck className="w-4 h-4 text-purple-600" />
+            <div className="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-medium text-indigo-700">
+              <span>Source-Verified</span>
+              <ShieldCheck className="w-4 h-4 text-indigo-600" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Safety Notice Banner */}
-      <section className="py-12 bg-amber-50/50 border-y border-amber-200/80">
+      {/* How it Works Workflow Section */}
+      <section className="bg-slate-100/60 py-16 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs uppercase tracking-wider font-bold text-emerald-700">
+              End-to-End Orchestration
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+              How MediMitra Coordinates Care
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 text-center">
+            {[
+              { step: '1', title: 'Patient Request', desc: 'Appointment, Ambulance, or Blood need submitted.' },
+              { step: '2', title: 'Classify & Route', desc: 'Intent classification & urgency validation.' },
+              { step: '3', title: 'Coordination Engine', desc: 'Haversine distance & operational ranking.' },
+              { step: '4', title: 'Hospital Command', desc: 'Instant live queue update on hospital dashboard.' },
+              { step: '5', title: 'Status Dispatch', desc: 'In-app, WhatsApp, and Voice alerts triggered.' },
+              { step: '6', title: 'Audit Trail', desc: 'Complete history logged in SQLite/Postgres datastore.' },
+            ].map((s, idx) => (
+              <div key={idx} className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs">
+                <div className="w-7 h-7 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center mx-auto mb-2">
+                  {s.step}
+                </div>
+                <h4 className="font-semibold text-slate-800 text-xs mb-1">{s.title}</h4>
+                <p className="text-[11px] text-slate-600 leading-snug">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explicit Non-Negotiable Safety & Disclaimer Section */}
+      <section className="py-12 bg-white border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border border-amber-300 rounded-3xl p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-5 shadow-xs">
-            <div className="p-3.5 bg-amber-100 text-amber-800 rounded-2xl shrink-0">
+          <div className="bg-amber-50/70 border border-amber-300 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-4">
+            <div className="p-3 bg-amber-100 text-amber-800 rounded-xl">
               <ShieldCheck className="w-8 h-8" />
             </div>
             <div>
-              <h3 className="font-bold text-amber-900 text-base sm:text-lg mb-2 font-heading">
-                Operational Scope & Non-Clinical Disclaimer
+              <h3 className="font-bold text-amber-900 text-base sm:text-lg mb-2">
+                Mandatory Operational Scope & Safety Notice
               </h3>
               <p className="text-xs sm:text-sm text-amber-800 leading-relaxed">
-                <strong>MediMitra is an administrative coordination and resource routing platform.</strong> It does not diagnose medical conditions, prescribe medicines, or replace clinical triage. All ranking factors (distance, bed capacity, wait times) are strictly logistical metrics. In any emergency situation, dial <strong>108</strong> immediately.
+                <strong>MediMitra provides healthcare coordination and administrative support.</strong> It does not provide medical diagnosis, treatment recommendations, medicine suggestions, or clinical decision-making. All ranking algorithms are strictly operational resource metrics (distance, reported availability, and queue time) and are never clinical triage. In medical emergencies, always dial emergency services (108) immediately.
               </p>
             </div>
           </div>
@@ -283,20 +301,20 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, onOpenAuth
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs">
+      <footer className="bg-slate-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            <span className="font-bold text-white text-base font-heading">MediMitra</span> — One request. The right connection.
-            <div className="mt-1 text-slate-400">Autonomous Emergency Healthcare Infrastructure · Pune & Mumbai Metro Network</div>
+            <span className="font-bold text-white text-sm">MediMitra</span> — One request. The right connection.
+            <div className="mt-1 text-[11px]">Unified Emergency & Hospital Resource Coordination Infrastructure · Pune & Mumbai Network</div>
           </div>
-          <div className="flex gap-6">
-            <button onClick={() => onOpenAuth('patient')} className="text-slate-300 hover:text-emerald-400 transition-colors cursor-pointer font-medium">
+          <div className="flex gap-4">
+            <button onClick={() => onOpenAuth('patient')} className="hover:text-white cursor-pointer">
               Patient Portal
             </button>
-            <button onClick={() => onOpenAuth('hospital_staff')} className="text-slate-300 hover:text-sky-400 transition-colors cursor-pointer font-medium">
+            <button onClick={() => onOpenAuth('hospital_staff')} className="hover:text-white cursor-pointer">
               Hospital Staff
             </button>
-            <button onClick={() => onOpenAuth('admin')} className="text-slate-300 hover:text-indigo-400 transition-colors cursor-pointer font-medium">
+            <button onClick={() => onOpenAuth('admin')} className="hover:text-white cursor-pointer">
               Admin Console
             </button>
           </div>

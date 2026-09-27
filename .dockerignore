@@ -8,8 +8,6 @@ build/
 .env
 .git
 .gitignore
-*.db
-*.sqlite
 .venv
 venv
 env/
