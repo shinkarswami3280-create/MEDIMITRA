@@ -27,7 +27,7 @@ const MainContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-900 flex flex-col font-sans selection:bg-emerald-500 selection:text-white">
       <Navbar
         currentTab={currentTab}
         onTabChange={(tab) => setCurrentTab(tab)}
