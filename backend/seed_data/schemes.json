@@ -1,0 +1,134 @@
+[
+  {
+    "name": "Ayushman Bharat – Pradhan Mantri Jan Arogya Yojana (PM-JAY)",
+    "state": "National",
+    "description": "World's largest health insurance scheme providing coverage up to ₹5 lakh per family per year for secondary and tertiary care hospitalisation at empanelled hospitals across India.",
+    "eligibility": "Families identified based on Socio-Economic Caste Census (SECC) 2011. Includes deprived rural and occupational urban categories. No cap on family size or age.",
+    "documents": "Aadhaar card (or any government-issued photo ID), Ration card, SECC list verification at Common Service Centre",
+    "official_website": "https://pmjay.gov.in",
+    "official_contact": "14555",
+    "source": "https://pmjay.gov.in/contact",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Mahatma Jyotirao Phule Jan Arogya Yojana (MJPJAY)",
+    "state": "Maharashtra",
+    "description": "Maharashtra's state health scheme that complements PM-JAY, offering cashless treatment up to ₹1.5 lakh (or ₹2.5 lakh for select major surgeries) at government and empanelled private hospitals for below-poverty-line families.",
+    "eligibility": "Below Poverty Line (BPL) families, yellow and orange ration card holders, farmers with outstanding agricultural loans, and eligible occupational groups in Maharashtra.",
+    "documents": "Yellow/orange ration card, Aadhaar card, income certificate, BPL certificate",
+    "official_website": "https://www.jeevandayee.gov.in",
+    "official_contact": "155388",
+    "source": "https://www.jeevandayee.gov.in/contactus",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Maharashtra Chief Minister's Medical Assistance Fund",
+    "state": "Maharashtra",
+    "description": "Provides financial assistance for expensive medical treatment to patients who cannot afford treatment costs and are not covered under any other government scheme. Maximum assistance of ₹5 lakh per beneficiary.",
+    "eligibility": "Maharashtra residents with annual family income below ₹8 lakh. Not covered under any other state or central health scheme. Serious illness requiring costly treatment.",
+    "documents": "Income certificate from Tehsildar, Domicile certificate, Medical papers from treating hospital, Cost estimate from hospital, Aadhaar card, Bank account details",
+    "official_website": "https://aaplesarkar.mahaonline.gov.in",
+    "official_contact": "1800-120-8040",
+    "source": "https://aaplesarkar.mahaonline.gov.in/en",
+    "last_verified": "2024-01-08"
+  },
+  {
+    "name": "Janani Suraksha Yojana (JSY)",
+    "state": "National",
+    "description": "Conditional cash transfer scheme for promoting institutional delivery among poor pregnant women. Provides cash assistance to mothers delivering in government health facilities.",
+    "eligibility": "All pregnant women belonging to BPL/SC/ST categories delivering in government hospitals. In Low Performing States, all women who deliver in government facilities are eligible.",
+    "documents": "MCH card (Mother and Child Health card), Aadhaar card, Bank account passbook, BPL/SC/ST certificate",
+    "official_website": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=841&lid=309",
+    "official_contact": "104",
+    "source": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=841&lid=309",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Rashtriya Bal Swasthya Karyakram (RBSK)",
+    "state": "National",
+    "description": "Free health screening and early intervention services for children from birth to 18 years. Covers 4Ds — Defects at birth, Diseases, Deficiencies, and Developmental delays including disabilities.",
+    "eligibility": "All children from 0 to 18 years. Screening done at government schools, anganwadis, and government health facilities. Free treatment for detected conditions at District Early Intervention Centres (DEIC).",
+    "documents": "Birth certificate or school ID, Aadhaar card of child/parent",
+    "official_website": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1027&lid=609",
+    "official_contact": "104",
+    "source": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1027&lid=609",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "National Mental Health Programme (NMHP)",
+    "state": "National",
+    "description": "Ensures availability and accessibility of mental health services for all, with emphasis on community-based mental health care. Provides free outpatient and inpatient care at District Mental Health Programme centres.",
+    "eligibility": "All citizens. Priority to BPL families and persons with severe mental disorders.",
+    "documents": "Government-issued ID, BPL card (for priority access), Referral slip from government health facility",
+    "official_website": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1043&lid=609",
+    "official_contact": "NIMHANS Helpline: 080-46110007",
+    "source": "https://nimhans.ac.in/services/helpline/",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Central Government Health Scheme (CGHS)",
+    "state": "National",
+    "description": "Comprehensive healthcare facility for Central Government employees, pensioners, and their dependents. Provides both OPD and IPD treatment at CGHS wellness centres and empanelled hospitals.",
+    "eligibility": "Central Government employees (serving and retired), CGHS card holders and their registered dependents.",
+    "documents": "CGHS card, Employee/pension ID, Aadhaar card",
+    "official_website": "https://cghs.gov.in",
+    "official_contact": "011-23061387",
+    "source": "https://cghs.gov.in/index-hindi.php?id=8",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Mission Indradhanush",
+    "state": "National",
+    "description": "Universal immunization programme to improve vaccination coverage for children and pregnant women, targeting diseases like Diphtheria, Whooping Cough, Tetanus, Polio, Measles, Hepatitis B and Meningitis.",
+    "eligibility": "Children up to 2 years of age and pregnant women. Special focus on unvaccinated and partially vaccinated populations in high-risk districts.",
+    "documents": "Birth certificate or parent's ID for child registration. No documents required for vaccination — free and accessible at all government health centres.",
+    "official_website": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1043&lid=606",
+    "official_contact": "104",
+    "source": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1043&lid=606",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Pradhan Mantri Surakshit Matritva Abhiyan (PMSMA)",
+    "state": "National",
+    "description": "Fixed-day antenatal care (ANC) services on 9th of every month at designated government health facilities. Provides free and comprehensive checkups for pregnant women in their 2nd and 3rd trimester.",
+    "eligibility": "All pregnant women in their second and third trimester, particularly those who lack access to quality antenatal care.",
+    "documents": "MCH card, Aadhaar card",
+    "official_website": "https://pmsma.nhp.gov.in",
+    "official_contact": "1800-180-1104",
+    "source": "https://pmsma.nhp.gov.in/contact-us/",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Poshan Abhiyan (National Nutrition Mission)",
+    "state": "National",
+    "description": "Addresses malnutrition among children (0–6 years), pregnant women, and lactating mothers. Provides supplementary nutrition, growth monitoring, health check-ups, and referral services at Anganwadi centres.",
+    "eligibility": "Children aged 0–6 years, pregnant women, lactating mothers, and adolescent girls.",
+    "documents": "Aadhaar card or any government ID, MCH card for pregnant/lactating women, Birth certificate for children",
+    "official_website": "https://poshanabhiyaan.gov.in",
+    "official_contact": "1800-180-1104",
+    "source": "https://poshanabhiyaan.gov.in/#/",
+    "last_verified": "2024-01-10"
+  },
+  {
+    "name": "Maharashtra Arogya Nidhi",
+    "state": "Maharashtra",
+    "description": "Financial assistance for catastrophic illness treatment for patients below poverty line in Maharashtra who require treatment at state government hospitals for life-threatening diseases.",
+    "eligibility": "Residents of Maharashtra below poverty line. Suffering from life-threatening or catastrophic illnesses. Admitted to government hospitals in Maharashtra.",
+    "documents": "Yellow/orange ration card or BPL certificate, Medical papers, Cost estimate from superintendent of treating government hospital, Income proof, Domicile certificate",
+    "official_website": "https://arogya.maharashtra.gov.in",
+    "official_contact": "1800-233-4397",
+    "source": "https://arogya.maharashtra.gov.in/Site/Home/contact.aspx",
+    "last_verified": "2024-01-08"
+  },
+  {
+    "name": "PM National Dialysis Programme",
+    "state": "National",
+    "description": "Free dialysis services for BPL patients suffering from chronic kidney disease at district hospitals across India. Aims to provide 2–3 sessions per week per patient.",
+    "eligibility": "BPL patients with Chronic Kidney Disease (CKD) or End Stage Renal Disease (ESRD). Registered with district health authorities.",
+    "documents": "BPL card, Aadhaar card, Medical certificate confirming CKD/ESRD from a registered medical practitioner, Referral from government hospital",
+    "official_website": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1043&lid=607",
+    "official_contact": "104",
+    "source": "https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=1043&lid=607",
+    "last_verified": "2024-01-10"
+  }
+]

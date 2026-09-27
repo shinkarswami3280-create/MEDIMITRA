@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Sassoon General Hospital",
+    "address": "Near Pune Railway Station, Pune - 411001",
+    "lat": 18.5198,
+    "lng": 73.8553,
+    "services": ["Emergency", "General Medicine", "Surgery", "Pediatrics", "Obstetrics", "Psychiatry", "Orthopedics", "Dermatology", "ICU", "Trauma"]
+  },
+  {
+    "name": "Ruby Hall Clinic",
+    "address": "40, Sassoon Road, Sangamvadi, Pune - 411001",
+    "lat": 18.5331,
+    "lng": 73.8745,
+    "services": ["Cardiology", "Neurology", "Oncology", "Orthopedics", "Emergency", "ICU", "General Medicine", "Radiology", "Dialysis"]
+  },
+  {
+    "name": "Jehangir Hospital",
+    "address": "32, Sassoon Road, Pune - 411001",
+    "lat": 18.5312,
+    "lng": 73.8783,
+    "services": ["Cardiology", "Neurology", "Gastroenterology", "Oncology", "Emergency", "General Medicine", "ICU", "Robotic Surgery"]
+  },
+  {
+    "name": "KEM Hospital Pune",
+    "address": "Rasta Peth, Pune - 411011",
+    "lat": 18.5120,
+    "lng": 73.8770,
+    "services": ["Emergency", "General Medicine", "Surgery", "Pediatrics", "Orthopedics", "Gynecology", "ENT"]
+  },
+  {
+    "name": "Deenanath Mangeshkar Hospital",
+    "address": "Erandvane, Pune - 411004",
+    "lat": 18.5089,
+    "lng": 73.8235,
+    "services": ["Cardiology", "Cancer Care", "Neurology", "Orthopedics", "Emergency", "ICU", "Pediatrics", "General Medicine"]
+  },
+  {
+    "name": "Inamdar Multispeciality Hospital",
+    "address": "2413/1, Fatima Nagar, Wanowrie, Pune - 411040",
+    "lat": 18.4994,
+    "lng": 73.8969,
+    "services": ["Orthopedics", "Cardiology", "Neurology", "Emergency", "General Medicine", "Dialysis", "ICU"]
+  },
+  {
+    "name": "Noble Hospital",
+    "address": "153, Magarpatta Road, Hadapsar, Pune - 411013",
+    "lat": 18.5036,
+    "lng": 73.9274,
+    "services": ["Emergency", "Cardiology", "General Medicine", "Orthopedics", "Pediatrics", "Urology", "ICU"]
+  },
+  {
+    "name": "Poona Hospital & Research Centre",
+    "address": "27, Sadashiv Peth, Pune - 411030",
+    "lat": 18.5165,
+    "lng": 73.8492,
+    "services": ["General Medicine", "Surgery", "Obstetrics", "Pediatrics", "Emergency", "ENT"]
+  },
+  {
+    "name": "Columbia Asia Hospital Pune",
+    "address": "Kharadi, Pune - 411014",
+    "lat": 18.5551,
+    "lng": 73.9418,
+    "services": ["Cardiology", "Emergency", "General Medicine", "Orthopedics", "Neurology", "ICU"]
+  },
+  {
+    "name": "Aditya Birla Memorial Hospital",
+    "address": "Thergaon, Pimpri-Chinchwad, Pune - 411033",
+    "lat": 18.6298,
+    "lng": 73.7785,
+    "services": ["Cardiology", "Cancer Care", "Neurology", "Emergency", "Orthopedics", "Pediatrics", "ICU", "Transplant"]
+  },
+  {
+    "name": "Kokilaben Dhirubhai Ambani Hospital",
+    "address": "Rao Saheb Achutrao Patwardhan Marg, Four Bungalows, Andheri West, Mumbai - 400053",
+    "lat": 19.1197,
+    "lng": 72.8464,
+    "services": ["Cardiology", "Emergency", "Orthopedics", "Neurology", "Oncology", "ICU", "Pediatrics", "General Medicine", "Robotic Surgery"]
+  },
+  {
+    "name": "KEM Hospital Mumbai",
+    "address": "Acharya Donde Marg, Parel, Mumbai - 400012",
+    "lat": 19.0024,
+    "lng": 72.8425,
+    "services": ["Emergency", "General Medicine", "Surgery", "Pediatrics", "Obstetrics", "Psychiatry", "Orthopedics", "Burn Unit"]
+  },
+  {
+    "name": "Lilavati Hospital & Research Centre",
+    "address": "A-791, Bandra Reclamation, Bandra West, Mumbai - 400050",
+    "lat": 19.0496,
+    "lng": 72.8258,
+    "services": ["Cardiology", "Neurology", "Gastroenterology", "Oncology", "Emergency", "General Medicine", "ICU"]
+  },
+  {
+    "name": "Fortis Hospital Mulund",
+    "address": "Mulund Goregaon Link Road, Mulund West, Mumbai - 400078",
+    "lat": 19.1720,
+    "lng": 72.9560,
+    "services": ["Cardiology", "Orthopedics", "Neurology", "Emergency", "ICU", "General Medicine"]
+  },
+  {
+    "name": "Jupiter Hospital Thane",
+    "address": "Eastern Express Highway, Thane - 400601",
+    "lat": 19.2067,
+    "lng": 72.9838,
+    "services": ["Emergency", "Cardiology", "Orthopedics", "Neurology", "Pediatrics", "ICU", "General Medicine"]
+  }
+]
